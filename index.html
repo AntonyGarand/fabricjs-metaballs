@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Metaball thingy!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+  </head>  
+  <body>
+    
+    <div>
+      <button id="toggle-animations">
+        Toggle animations
+      </button>
+    </div>
+    
+    <canvas id="c"></canvas>
+    
+    <script>
+      {
+        const canvas = document.querySelector('canvas');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.6.0/fabric.js"></script>
+    <script src="/script.js" type="module"></script>
+    
+  </body>
+</html>
