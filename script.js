@@ -15,8 +15,8 @@ function heron(a,b,c){
   return Math.sqrt(s * (s-a) * (s-b) * (s-c));
 }
 
-const rows = 4;
-const cols = 5;
+const rows = 3;
+const cols = 4;
 const xOffset = canvas.width / cols / 2;
 const yOffset = canvas.height / rows / 2;
 const xStep = canvas.width / cols;
@@ -30,13 +30,13 @@ for(let i = 0; i < balls; i++){
     y: (Math.floor(i / cols) * yStep) + yOffset, 
   }
   
-  const ball = MetaBall(position, {evented: false, isAnimated: true}, ~~(Math.random()*50)+50);
+  const ball = MetaBall(position, {evented: false, isAnimated: true}, ~~(Math.random()*50)+40);
   canvas.add(ball);
   
   animate(ball);
 }
 
-const ball = MetaBall({x: canvas.width/2, y: canvas.height/2}, {fill: 'white', stroke: 'black',strokeWidth:2}, ~~(Math.random()*50)+100);
+const ball = MetaBall({x: canvas.width/2, y: canvas.height/2}, {fill: 'white', stroke: 'black',strokeWidth:2}, ~~(Math.random()*50)+60);
 canvas.add(ball);
 
 update(canvas);
